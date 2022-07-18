@@ -6,44 +6,45 @@
     </head>
     <body>
         <div class="container">
-            <input type="text" placeholder="0" disabled>
-            <input type="text" placeholder="0" disabled>
+            <input type="text" id="expression" placeholder="0" disabled>
+            <input type="text" id="result" placeholder="0" disabled>
             <table>
                 <tr>
-                    <td>(</td>
-                    <td>)</td>
-                    <td>&lt;-</td>
-                    <td class="symbol">+</td>
+                    <td onclick="show('\u0028')">(</td>
+                    <td onclick="show('\u0029')">)</td>
+                    <td onclick="backspace()">&lt;-</td>
+                    <td onclick="show('+')" class="symbol">+</td>
                 </tr>
 
                 <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td class="symbol">-</td>
+                    <td onclick="show('7')">7</td>
+                    <td onclick="show('8')">8</td>
+                    <td onclick="show('9')">9</td>
+                    <td onclick="show('-')" class="symbol">-</td>
                 </tr>
 
                 <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td class="symbol">&times;</td>
+                    <td onclick="show('4')">4</td>
+                    <td onclick="show('5')">5</td>
+                    <td onclick="show('6')">6</td>
+                    <td onclick="show('*')" class="symbol">&times;</td>
                 </tr>
 
                 <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="symbol">&#247;</td>
+                    <td onclick="show('1')">1</td>
+                    <td onclick="show('2')">2</td>
+                    <td onclick="show('3')">3</td>
+                    <td onclick="show('/')" class="symbol">&#247;</td>
                 </tr>
 
                 <tr>
-                    <td>C</td>
-                    <td>0</td>
-                    <td>.</td>
-                    <td class="equal">=</td>
+                    <td onclick="clearAll()" >C</td>
+                    <td onclick="show('0')">0</td>
+                    <td onclick="show('.')">.</td>
+                    <td onclick="calc()" class="equal">=</td>
                 </tr>
             </table>
         </div>
+        <script src="functionality.js"></script> 
     </body>
 </html>
